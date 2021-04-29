@@ -6,7 +6,7 @@ pipeline {
     
     stage("KubeDeploy"){
       steps{
-        echo "hi"
+        echo "kubectl apply -f deploy.yaml --kubeconfig admin.config"
       }
     }
     
