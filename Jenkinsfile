@@ -3,7 +3,7 @@ pipeline {
   agent any
   
   parameters {
-    booleanParam(name: "isDeployPod", defaultValue: true)
+    booleanParam(name: "isDeployPod" , defaultValue: true)
   }
   
   stages{
@@ -11,7 +11,7 @@ pipeline {
     stage("KubeDeploy"){
       when{
         expression{
-          param.isDeployPod
+          params.isDeployPod
         }
       }
       
